@@ -1,0 +1,14 @@
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\bin\Debug\net8.0\AsyncProgramming.exe
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\bin\Debug\net8.0\AsyncProgramming.deps.json
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\bin\Debug\net8.0\AsyncProgramming.runtimeconfig.json
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\bin\Debug\net8.0\AsyncProgramming.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\bin\Debug\net8.0\AsyncProgramming.pdb
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.AssemblyInfoInputs.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.AssemblyInfo.cs
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.csproj.CoreCompileInputs.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\refint\AsyncProgramming.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.pdb
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\AsyncProgramming.genruntimeconfig.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\AsyncProgramming\obj\Debug\net8.0\ref\AsyncProgramming.dll

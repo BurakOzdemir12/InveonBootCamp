@@ -1,0 +1,14 @@
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\bin\Debug\net8.0\SOLID.exe
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\bin\Debug\net8.0\SOLID.deps.json
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\bin\Debug\net8.0\SOLID.runtimeconfig.json
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\bin\Debug\net8.0\SOLID.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\bin\Debug\net8.0\SOLID.pdb
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.AssemblyInfoInputs.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.AssemblyInfo.cs
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.csproj.CoreCompileInputs.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\refint\SOLID.dll
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.pdb
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\SOLID.genruntimeconfig.cache
+C:\Users\qbura\OneDrive\Masaüstü\Inveon Bootcamp\HomeWorkOne\HomeWorkOne\obj\Debug\net8.0\ref\SOLID.dll
