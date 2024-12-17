@@ -1,0 +1,49 @@
+﻿@model List<LibraryManagementSystem.Models.Repository.AppRole>
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h1>Roller</h1>
+
+<table class="table table-striped">
+    <thead>
+            <th>Rol Adı</th>
+            <th>İşlemler</th>
+    </thead>
+    <tbody>
+        @foreach (var role in Model)
+        {
+            <tr>
+                <td>@role.Name</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal-@role.Id">
+                        Sil
+                    </button>
+                    <div class="modal fade" id="deleteModal-@role.Id" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">Silme İşlemi</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>@role.Name</strong> Rolünü silmek istediğinizden emin misiniz?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="post" asp-action="Delete" asp-controller="Role">
+                                        <input type="hidden" name="id" value="@role.Id" />
+                                        <button type="submit" class="btn btn-danger">Evet, Sil</button>
+                                    </form>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-controller="Role" asp-action="Update" asp-route-id="@role.Id" class="btn btn-warning btn-sm">
+                        Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+﻿@model LibraryManagementSystem.Models.Repository.AppRole
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<h2>Rol Güncelle</h2>
+
+
+<form method="post" asp-action="Update" asp-controller="Role">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="Name" class="form-control" />
+        <label asp-for="Name">Kullanıcı Adı</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

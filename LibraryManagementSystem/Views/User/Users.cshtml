@@ -1,0 +1,138 @@
+﻿@model List<LibraryManagementSystem.Models.Repository.AppUser>
+@{
+    ViewData["Title"] = "Users";
+    var userRoles = ViewBag.UserRoles as Dictionary<string, IList<string>>;
+
+}
+
+<h1>Users</h1>
+
+<div class="col-12 mt-5">
+    <table class="table table-striped">
+        <thead>
+        <th style="" >
+            İsim
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Şehir
+        </th>
+        <th>
+            Telefon
+        </th>
+        
+        <th>
+            İşlemler
+        </th>
+        <th>
+           Mevcut Rol
+        </th>
+        <th>
+            Rol Ekle/Çıkar
+        </th>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td class="">@user.UserName</td>
+                    <td class="">@user.Email</td>
+                    <td class="">@user.City</td>
+                    <td class="">@user.PhoneNumber</td>
+                    <td >
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal-@user.Id">
+                            Sil
+                        </button>
+                        <div class="modal fade" id="deleteModal-@user.Id" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Silme İşlemi</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><strong>@user.UserName</strong> kullanıcısını silmek istediğinizden emin misiniz?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form method="post" asp-action="Delete" asp-controller="User">
+                                            <input type="hidden" name="id" value="@user.Id" />
+                                            <button type="submit" class="btn btn-danger">Evet, Sil</button>
+                                        </form>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a asp-controller="User" asp-action="UpdateUser" asp-route-id="@user.Id" class="btn btn-warning btn-sm">
+                            Güncelle
+                        </a>
+                    </td>
+                    <td>
+
+                        @if (userRoles.ContainsKey(user.Id.ToString()))
+                        {
+                            foreach (var role in userRoles[user.Id.ToString()])
+                            {
+                                <span class="badge bg-success">@role</span>
+                            }
+                        }else
+                        {
+                            <span>Rol Yok</span>
+                        }
+
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#manageRoles-@user.Id">
+                            Rol Yönetimi
+                        </button>
+
+                        <div class="modal fade" id="manageRoles-@user.Id" tabindex="-1" aria-labelledby="manageRolesLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="manageRolesLabel">Rol Yönetimi - @user.UserName</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" asp-action="AddRoleToUser" asp-controller="User">
+                                            <input type="hidden" name="userId" value="@user.Id" />
+                                            <div class="form-floating mb-3">
+                                                <select name="role" class="form-control">
+                                                    @foreach (var role in ViewBag.Roles as List<string>)
+                                                    {
+                                                        <option value="@role">@role</option>
+                                                    }
+                                                </select>
+                                                <label>Rol Seç</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Rol Ekle</button>
+                                        </form>
+                                        <hr />
+                                        <h5>Mevcut Roller</h5>
+                                        <ul>
+                                            @foreach (var role in ViewBag.UserRoles[@user.Id.ToString()])
+                                            {
+                                                <li>
+                                                    @role
+                                                    <form method="post" asp-action="RemoveRoleFromUser" asp-controller="User" style="display:inline;">
+                                                        <input type="hidden" name="userId" value="@user.Id" />
+                                                        <input type="hidden" name="role" value="@role" />
+                                                        <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                                                    </form>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+</div>

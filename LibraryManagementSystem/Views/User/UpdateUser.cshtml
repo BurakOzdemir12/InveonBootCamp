@@ -1,0 +1,55 @@
+﻿@model LibraryManagementSystem.Models.Repository.AppUser
+
+@{
+    ViewData["Title"] = "UpdateUser";
+    var userRoles = ViewBag.UserRoles as IList<string>;
+    var roles = ViewBag.appRoles as IList<string>;
+
+
+}
+
+
+
+<h2 class="mt-4 mb-5">Kullanıcı Güncelle</h2>
+
+
+<form method="post" asp-action="UpdateUser" asp-controller="User">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="UserName" class="form-control" />
+        <label asp-for="UserName">Kullanıcı Adı</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" asp-for="Email" class="form-control" />
+        <label asp-for="Email">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="City" class="form-control" />
+        <label asp-for="City">Şehir</label>
+    </div>
+    <div class=" mb-3">
+        <label class="  mb-4 mt-4" >Kullanıcı Rolü: </label>
+
+
+        @if (userRoles != null && userRoles.Count > 0)
+        {
+            foreach (var role in userRoles)
+            {
+                <select>
+
+                    <option selected>@role</option>
+                <span class="badge bg-primary">@role</span>
+                </select>
+
+            }
+        }else{
+            <span>Rol Yok</span>
+
+        }
+
+
+        
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

@@ -1,0 +1,61 @@
+﻿@model List<LibraryManagementSystem.Models.Repository.AppUser>
+
+@{
+    ViewData["Title"] = "Admin";
+
+}
+
+<h1>Admin</h1>
+    <div class="row">
+        <div class="d-flex col-12">
+        <div class="col-6 ">
+    <form id="userCreateForm" method="post" asp-controller="User" asp-action="UserCreate">
+     <h2>Kullanıcı Oluştur.</h2>
+     <br />
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert" ></div>
+    <div class="form-floating mb-3">
+                <input type="text" name="userName" autocomplete="username" class="form-control" aria-required="true" placeholder="name@example.com" />
+        <label>Kullanıcı Adı</label>
+@*      <span asp-validation-for="Input" class="text-danger"></span>*@
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+        <label >Email</label>
+    @* <span asp-validation-for="Input.Email" class="text-danger"></span> *@
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="password" class="form-control" autocomplete="password" aria-required="true" placeholder="name@example.com" />
+        <label>Şifre</label>
+        @* <span asp-validation-for="Input.Email" class="text-danger"></span> *@
+    </div>
+         <button id="registerSubmit" type="submit" class="w-50 btn btn-lg btn-primary">Kullanıcı Ekle</button>
+
+    </form>
+            <div class="col-12">
+                <a asp-controller="User" asp-action="GetUsers" style=" max-width:200px" class="  btn btn-primary mt-5">Kullanıcıları Görüntüle</a>
+            </div>
+    </div>
+    
+    
+    @* Role *@
+    <div class="mx-5 col-6 ">
+        <form id="roleCreateForm" method="post" asp-controller="Role" asp-action="RoleCreate">
+            <h2>Rol Oluştur.</h2>
+            <br />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input type="text" name="roleName"  class="form-control" aria-required="true" placeholder="Müşteri" />
+                <label>Rol Adı</label>
+                @*      <span asp-validation-for="Input" class="text-danger"></span>*@
+            </div>
+            <button id="registerSubmit" type="submit" class="w-50 btn btn-lg btn-primary">Rol Ekle</button>
+
+        </form>
+            <div class="col-12">
+                <a asp-controller="Role" asp-action="GetRoles" style=" max-width:200px" class="  btn btn-primary mt-5">Rolleri Görüntüle</a>
+            </div>
+    </div>
+    
+    </div>
+</div>
+    
